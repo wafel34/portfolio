@@ -25,6 +25,11 @@
   },
   "homepage": "https://github.com/wafel34/portfolio#readme",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1"
   }
 }
