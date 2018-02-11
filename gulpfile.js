@@ -105,8 +105,10 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch(jsSources, ['js']);
     gulp.watch('resources/sass/**/*.sass', ['sass']);
+    gulp.watch('resources/partials/**/*.sass', ['sass']);
     gulp.watch('resources/sass/**/*.scss', ['sass']);
     gulp.watch('app/**/*.ejs').on('change', browserSync.reload);
+    gulp.watch('resources/**/*.ejs').on('change', browserSync.reload);
 
 });
 
