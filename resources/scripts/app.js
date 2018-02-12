@@ -5,6 +5,7 @@ $(document).ready(function(){
         fixedDivParent = fixedDiv[0].parentElement.clientWidth;
         $.each(fixedDiv, function(item, value){
             $(value).width(fixedDivParent);
+            $(value).css('opacity', '1');
         });
         $(window).resize(function(){
             fixedDivParent = fixedDiv[0].parentElement.clientWidth;
