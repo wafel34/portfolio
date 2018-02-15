@@ -14,6 +14,6 @@ $(document).ready(function(){
             });
         });
 
-        animateIntro();
+        animations.animateIntro();
 
 });

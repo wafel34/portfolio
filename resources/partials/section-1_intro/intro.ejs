@@ -7,13 +7,20 @@
                          viewBox="0 0 1200 1200" style="enable-background:new 0 0 26.799 26.799;" xml:space="preserve" stroke-width="3" stroke="black" fill="none">
                     <g class="console">
                         <rect x="0" y="225" rx="10" ry="10" width="1200" height="600"  fill="black"/>
-                        <rect x="0" y="775"  rx="5" width="1200" height="50" fill="lightblue"/>
-                        <rect x="0" y="225"  rx="5" width="1200" height="50" fill="lightblue"/>
-                        <circle cx="25" cy="250" r="10" fill="white" stroke="white"/>
-                        <circle cx="60" cy="250" r="10" fill="white" stroke="white"/>
-                        <text class="console-text" x="15" y="350" font-size="60" stroke="none" fill="white">$: welcome!</text>
+                        <rect x="0" y="775" rx="5" width="1200" height="50" fill="lightgrey"/>
+                        <rect x="0" y="225" rx="5" width="1200" height="50" fill="lightgrey"/>
+                        <circle cx="25" cy="250" r="10" fill="white" stroke="black"/>
+                        <circle cx="60" cy="250" r="10" fill="white" stroke="black"/>
+                        <circle cx="95" cy="250" r="10" fill="white" stroke="black"/>
+                        <defs>
+                            <path id="mypath" d="M15 350 h100" stroke="white">
+                        </defs>
+                        <text class="console-text" font-size="60" stroke="none" fill="white">
+                            <textPath xlink:href="#mypath">
+                                 $: welcome!
+                            </textPath>
+                        </text>
                     </g>
-
                     </svg>
                 </div><!--svg wrapper sets fixed position-->
             </div><!--col-2-->
