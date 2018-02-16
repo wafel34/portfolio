@@ -11,6 +11,28 @@
     align-items: center
     padding: 0 25px
     background-color: #fff
+    box-shadow: 0px 2px 5px 2px rgba(255,255,255, .25)
+    &__items
+        display: flex
+        flex-direction: row
+    &__link
+        display: flex
+        align-items: center
+        color: $grey-primary
+        padding: 6px 20px
+        border-radius: 2px
+        transition: all .3s ease-in
+        &:focus,
+        &:hover
+            background-color: rgba($orange-light, .2)
+            transform: scale(1.05)
+
+    &__icon
+        fill: $grey-primary
+        margin-right: 5px
+    &__languages
+        display: flex
+        flex-direction: row
 
 .languages
     &__button
@@ -20,6 +42,9 @@
         background-color: transparent
         color: $grey-primary
         text-decoration: none
+        transition: all .3s ease-in
+        display: block
         &:hover,
         &:focus
-            background-color: rgba($orange-light, .1)
+            background-color: rgba($orange-light, .2)
+            transform: scale(1.05)

@@ -1,6 +1,7 @@
 var animations = {};
 
 animations.animateIntro = function() {
+
     var tl = new TimelineMax();
     tl.from('.console', 1, {transform: 'scale(0)', ease: Elastic.easeOut.config(1, 0.5), delay: 0.5});
     tl.staggerTo('#mypath', 3, {
