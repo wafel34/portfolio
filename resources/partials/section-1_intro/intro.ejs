@@ -12,6 +12,14 @@
                         <circle cx="25" cy="250" r="10" fill="white" stroke="black"/>
                         <circle cx="60" cy="250" r="10" fill="white" stroke="black"/>
                         <circle cx="95" cy="250" r="10" fill="white" stroke="black"/>
+
+                        <defs>
+                          <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%"   stop-color="#e64a19"/>
+                            <stop offset="100%" stop-color="#ff7d47"/>
+                          </linearGradient>
+                        </defs>
+                        <rect class="screen-border" x="0" y="225" rx="5" ry="5" width="1200" height="600" fill="none" stroke="url(#linear)" stroke-dasharray="3700" stroke-dashoffset="3700" stroke-width="6"/>
                         <defs>
                             <path id="mypath" d="M15 350 h100" stroke="blue">
                         </defs>
@@ -30,12 +38,6 @@
                     If you visited this website, it's quite possible that you are looking for a front-end developer.
                     Let me help you with that. Scroll down if you're interested.
                 </span>
-                <button class="intro__button-continue" id="intro-button">
-                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
-                        <path d="M0-.75h24v24H0z" fill="none"/>
-                    </svg>
-                </button>
             </div><!--col-2-->
 
         </div><!--wrapper controls clipping-->

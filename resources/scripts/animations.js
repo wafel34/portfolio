@@ -4,11 +4,12 @@ animations.animateIntro = function() {
 
     var tl = new TimelineMax();
     tl.from('.console', 1, {transform: 'scale(0)', ease: Elastic.easeOut.config(1, 0.5), delay: 0.5});
-    tl.staggerTo('#mypath', 3, {
+    tl.staggerTo('#mypath', 2.5, {
         attr: {
-            d: 'M15 350 h500'
+            d: 'M15 350 h320'
         }
     });
+    tl.to('.screen-border', 1, {attr: {'stroke-dashoffset': '0'}}, '-=1');
 };
 
 animations.animateScreen = function () {
