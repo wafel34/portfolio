@@ -44,7 +44,8 @@ gulp.task('browser-sync', ['nodemon'], function() {
     proxy: 'localhost:3000',  // local node app address
     port: 4200,  // use *different* port than above
     notify: true,
-    watch: ['app/server.js',]
+    watch: ['app/server.js',],
+    online: true
   });
 });
 
