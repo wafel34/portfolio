@@ -1,12 +1,17 @@
 ($(function(){
 
-
+    /* if mouse move over #stack section
+        grab mouse X position
+        grab LEFT offset of .technologies__front div (div with front end images)
+        grab width of the parent .technologies div
+    */
 
     // grab #stack section and .technologies__front div
     var technologiesFront = $('.technologies__front'),
         technologiesParent = $('.technologies')[0].clientWidth,
         imagesRow = $('.images-row'),
         stackSection = $('#stack');
+
 
         $.each(imagesRow, function(item, value){
             $(value).width(technologiesParent = $('.technologies')[0].clientWidth);
@@ -20,26 +25,22 @@
                 $(value).width(technologiesParent = $('.technologies')[0].clientWidth);
             });
         });
-    /* if mouse move over #stack section
-        grab mouse X position
-        grab LEFT offset of .technologies__front div (div with front end images)
-        grab width of the parent .technologies div
-    */
+
+
 
     $(stackSection).on('mousemove', function(e){
         var offset = technologiesFront.offset(),
-            technologiesFrontWindth = e.screenX - offset.left, //dynamically calculate width of .technologies__front div
+            technologiesFrontWindth = e.clientX - offset.left, //dynamically calculate width of .technologies__front div
             technologiesWidth = $('.technologies')[0].clientWidth;
 
         $(technologiesFront).width(technologiesFrontWindth); // set value to the one calculated above
-
         //if mouse X position is greater then div width, set set it to .technologies div's width.
-        if(e.screenX > (offset.left+technologiesWidth)) {
+        if(e.clientX > (offset.left+technologiesWidth)) {
             $(technologiesFront).width(technologiesWidth);
         }
 
         //if mouse X position is lower than offset, set it to offset
-        if(e.screenX < offset.left) {
+        if(e.clientX < offset.left) {
             $(technologiesFront).width(0);
         }
     });
