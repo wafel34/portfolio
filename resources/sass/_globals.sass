@@ -48,6 +48,7 @@ h1
     width: 50%
     height: 100%
     display: flex
+    overflow: auto
     align-items: center
     justify-content: center
     flex-direction: column
@@ -69,3 +70,18 @@ h1
     position: absolute
     top: 0
     left: 0
+
+@media screen and (max-width: 585px)
+    .wrapper
+        flex-direction: column
+
+    .col-2
+        width: 100%
+        justify-content: flex-start
+        overflow: hidden
+        &:first-child
+            justify-content: flex-end
+
+    .svg-wrapper
+        position: relative
+        height: 90%
