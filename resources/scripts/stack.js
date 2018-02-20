@@ -68,20 +68,22 @@
 
     //same for touchmove
     $(stackSection).on('touchmove', function(e){
-        var offset = technologiesFront.offset(),
-            screenX = e.originalEvent.touches[0].clientX, //dynamically calculate width of .technologies__front div
-            technologiesWidth = $('.technologies')[0].clientWidth;
+        if (window.innerWidth > 585) {
+            var offset = technologiesFront.offset(),
+                screenX = e.originalEvent.touches[0].clientX, //dynamically calculate width of .technologies__front div
+                technologiesWidth = $('.technologies')[0].clientWidth;
 
-        $(technologiesFront).width(screenX - offset.left);
+            $(technologiesFront).width(screenX - offset.left);
 
-        //if mouse X position is greater then div width, set set it to .technologies div's width.
-        if(screenX > (offset.left+technologiesWidth)) {
-            $(technologiesFront).width(technologiesWidth);
-        }
+            //if mouse X position is greater then div width, set set it to .technologies div's width.
+            if(screenX > (offset.left+technologiesWidth)) {
+                $(technologiesFront).width(technologiesWidth);
+            }
 
-        //if mouse X position is lower than offset, set it to offset
-        if(e.screenX < offset.left) {
-            $(technologiesFront).width(0);
+            //if mouse X position is lower than offset, set it to offset
+            if(e.screenX < offset.left) {
+                $(technologiesFront).width(0);
+            }
         }
     });
 }));
