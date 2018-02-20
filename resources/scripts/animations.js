@@ -1,5 +1,6 @@
 var animations = {};
 
+// this function is responsible for animation of CONSOLE in INTRO section
 animations.animateIntro = function() {
 
     var tl = new TimelineMax();
@@ -10,9 +11,26 @@ animations.animateIntro = function() {
         }
     });
     tl.to('.screen-border', 1, {attr: {'stroke-dashoffset': '0'}}, '-=1');
+
+
+    animations.createController();
 };
 
+//this function creates ScrollMagic controller that fires a function on scroll
+animations.createController = function() {
+    var controller = new ScrollMagic.Controller();
+    new ScrollMagic.Scene({
+        triggerElement: '#about',
+        reverse:false,
+        offset: (window.innerHeight > 400) ? 200 : 0  // set offset depending on screen height
+    })
+    .on('start', function(){animations.animateScreen();})
+    .addTo(controller); // assign the scene to the controller
+};
+
+// this function is responsible for animation of SCREEN/MOBILE in ABOUT section
 animations.animateScreen = function () {
+
     var tl = new TimelineMax({delay:0.5, repeat: -1});
     tl.to('.screen-rectangle', 2, {attr: { width: 400}, transform: 'translateX(400px)', ease: Power2.easeInOut});
     tl.to('.screen-background', 2, {attr: { width: 400}, transform: 'translateX(300px)', ease: Power2.easeInOut}, '-=2');
@@ -34,14 +52,4 @@ animations.animateScreen = function () {
     tl.to('.bottom', 0.5, {opacity: 1, ease: Power4.easeInOut}, '-=1.5');
 
     tl.set({}, {}, '+=2');
-
 };
-
-var controller = new ScrollMagic.Controller();
-new ScrollMagic.Scene({
-    triggerElement: '#about',
-    reverse:false,
-    offset: (window.innerHeight > 400) ? 200 : 0  // set offset depending on screen height
-})
-    .on('start', function(){animations.animateScreen();})
-    .addTo(controller); // assign the scene to the controller

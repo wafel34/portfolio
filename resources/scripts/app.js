@@ -1,6 +1,8 @@
 var $ = window.jQuery = require('jQuery');
 
 $(document).ready(function(){
+
+
     var fixedDiv = $('.svg-wrapper'),
         appContainerOffsetLeft = $('.app-container')[0].offsetLeft,
         fixedDivParent = fixedDiv[0].parentElement.clientWidth,
