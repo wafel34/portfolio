@@ -1,0 +1,28 @@
+.projects
+    @extend .section
+    background-color: #ddd
+
+.app-container
+    &--projects
+        display: flex
+        flex-direction: row
+        align-content: flex-start
+        flex-wrap: wrap
+
+.card-wrapper
+    width: 25%
+    margin: -5px
+    padding: 10px
+    flex-wrap: wrap
+.card
+    background: #fff
+    display: flex
+    flex-direction: column
+    &__header
+        margin: 16px 0
+    &__description
+        margin-top: 0
+    &__image
+        background-image: url('../images/angular-app.PNG')
+        background-size: cover
+        height: 200px
