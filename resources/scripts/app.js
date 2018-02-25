@@ -19,10 +19,12 @@ $(document).ready(function(){
                 $(value).css('left', appContainerOffsetLeft);
             });
         });
-
+        
+        var sections = ['#intro', '#about', '#stack', '#projects'],
+            counter = 0;
         $(introButton).on('click', function(){
-            console.log('dupa');
-            TweenLite.to(window, .5, {scrollTo:'#about', ease:Power2.easeOut});
+            counter++;
+            TweenLite.to(window, .5, {scrollTo:sections[counter], ease:Power2.easeOut});
         });
         animations.animateIntro();
 

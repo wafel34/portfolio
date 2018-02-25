@@ -26,6 +26,14 @@ animations.createController = function() {
     })
     .on('start', function(){animations.animateScreen();})
     .addTo(controller); // assign the scene to the controller
+
+    new ScrollMagic.Scene({
+        triggerElement: '#projects',
+        reverse:false,
+        offset: (window.innerHeight > 400) ? 200 : 0  // set offset depending on screen height
+    })
+    .on('start', function(){animations.animateProjects();})
+    .addTo(controller); // assign the scene to the controller
 };
 
 // this function is responsible for animation of SCREEN/MOBILE in ABOUT section
@@ -52,4 +60,10 @@ animations.animateScreen = function () {
     tl.to('.bottom', 0.5, {opacity: 1, ease: Power4.easeInOut}, '-=1.5');
 
     tl.set({}, {}, '+=2');
+
+};
+
+animations.animateProjects = function() {
+    var tl = new TimelineMax();
+    tl.staggerTo('.card-wrapper', 2, {transform: 'translateX(0)', opacity: 1,ease: Bounce.easeOut, y: -500}, .1);
 };

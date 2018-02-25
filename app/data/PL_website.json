@@ -1,0 +1,68 @@
+{
+    "projects": [
+        {
+            "name": "Recipes App",
+            "description": "Full stack application built in Angular.",
+            "technologies": "Angular (2+, CLI), Sass, ExpressJS, MongoDB",
+            "image": "images/recipes-app.jpg",
+            "live": "https://recipes-angular-app.herokuapp.com/",
+            "code": "https://github.com/wafel34/recepies-angular-app"
+        },
+        {
+            "name": "Ski Jumping",
+            "description": "Website built with ExpressJS and EJS as a view engine.",
+            "technologies": "ExpressJS, EJS, Sass, Gulp",
+            "image": "images/skijumping.jpg",
+            "live": "https://skijumping.herokuapp.com/",
+            "code": "https://github.com/wafel34/skijumping"
+        },
+        {
+            "name": "Herbrand Street",
+            "description": "Built with vanilla JS. Used Google Maps API as well.",
+            "technologies": "Javascript, ExpressJS, External API, Accesibility, Sass, CSS Grid",
+            "image": "images/herbrand.jpg",
+            "live": "http://herbrandapartment.herokuapp.com/",
+            "code": "https://github.com/wafel34/herbrandStreet"
+        },
+        {
+            "name": "Meble GK",
+            "description": "Website built with Bootstrap 3.",
+            "technologies": "Bootstrap 3, Gulp",
+            "image": "images/meble.jpg",
+            "live": "https://wafel34.github.io/meble_gk/",
+            "code": "https://github.com/wafel34/meble_gk"
+        },
+        {
+            "name": "Freshness",
+            "description": "PSD to HTML.",
+            "technologies": "Sass, BEM",
+            "image": "images/freshness.jpg",
+            "live": "https://wafel34.github.io/Freshness/",
+            "code": "https://github.com/wafel34/Freshness"
+        },
+        {
+            "name": "Simon Game",
+            "description": "User repeats sounds played by computer.",
+            "technologies": "Javascript",
+            "image": "images/simon.jpg",
+            "live": "https://codepen.io/wafel34/full/RKebWy/",
+            "code": "https://codepen.io/wafel34/pen/RKebWy"
+        },
+        {
+            "name": "TicTacToe",
+            "description": "Older project. Game where user play against computer.",
+            "technologies": "Javascript",
+            "image": "images/tictactoe.jpg",
+            "live": "https://codepen.io/wafel34/full/NdzKVa/",
+            "code": "https://codepen.io/wafel34/pen/NdzKVa"
+        },
+        {
+            "name": "Calculator",
+            "description": "Another older project, simple calculator.",
+            "technologies": "Javascript",
+            "image": "images/calc.jpg",
+            "live": "https://codepen.io/wafel34/full/BQOaxB/",
+            "code": "https://codepen.io/wafel34/pen/BQOaxB"
+        }
+    ]
+}

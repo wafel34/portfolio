@@ -1,6 +1,10 @@
 .projects
     @extend .section
     background-color: #ddd
+    height: auto
+    padding-top: 64px
+    &__header
+        text-align: center
 
 .app-container
     &--projects
@@ -8,40 +12,88 @@
         flex-direction: row
         align-content: flex-start
         flex-wrap: wrap
+        padding: 0
+        justify-content: center
 
 .card-wrapper
     width: 25%
     margin: -5px
     padding: 10px
     flex-wrap: wrap
+    opacity: 0
+    transform: translateX(100px)
 .card
     background: #fff
     display: flex
     flex-direction: column
     padding: 10px
     border-radius: 2px
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,.5)
-    &__header
-        margin: 16px 0
+    box-shadow: 1px 2px 5px 0px rgba(0,0,0,.5)
+    height: 100%
     &__description
         margin: 16px 0
+        font-size: 1.6rem
     &__image
-        background-image: url('../images/angular-app.PNG')
         background-size: cover
         background-position: center
         height: 200px
         border-radius: 2px
-        margin: 16px 0
+        margin: -10px -10px 0 -10px
+        position: relative
+    &__header
+        color: $grey-dark
+        background-color: rgba($orange-light,.75)
+        font-size: 2.6rem
+        position: absolute
+        padding: 6px
+        bottom: 0
+        left: 0
+        width: 100%
+        margin: 0
+        border-top: 1px solid $grey-primary
+        border-bottom: 1px solid $grey-primary
     &__technologies
         margin: 16px 0
+        flex-grow: 1
     &__actions
         display: flex
-        justify-content: center
+        justify-content: flex-start
         margin: 16px 0
     &__button
-        margin: 0 10px
-        padding: 5px 25px
+        margin: 0
+        padding: 5px 15px
         border-radius: 2px
         border: none
-        background: $orange-light
-        box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
+        display: flex
+        align-items: center
+        background-color: rgba($orange-light, 0)
+        color: $grey-dark
+        font-weight: 700
+        transition: all .3s ease-in-out
+        cursor: pointer
+        &:focus,
+        &:hover
+            background-color: rgba($orange-light, .2)
+            box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
+    &__button-text
+        margin-right: 6px
+    &__button-svg
+        fill: $orange-primary
+
+
+@media screen and (max-width: 950px)
+    .card-wrapper
+        width: 33.3%
+
+@media screen and (max-width: 790px)
+    .card-wrapper
+        width: 50%
+
+@media screen and (max-width: 515px)
+    .card-wrapper
+        width: 80%
+        margin: 0 auto
+
+@media screen and (max-width: 380px)
+    .card-wrapper
+        width: 100%
