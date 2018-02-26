@@ -2,7 +2,8 @@
     @extend .section
     background-color: #ddd
     height: auto
-    padding-top: 64px
+    padding-top: 50px
+    padding-bottom: 16px
     &__header
         text-align: center
 
@@ -22,6 +23,7 @@
     flex-wrap: wrap
     opacity: 0
     transform: translateX(100px)
+
 .card
     background: #fff
     display: flex
@@ -30,6 +32,9 @@
     border-radius: 2px
     box-shadow: 1px 2px 5px 0px rgba(0,0,0,.5)
     height: 100%
+    &:hover
+        > .card__image > .card__header
+            background-color: $orange-light
     &__description
         margin: 16px 0
         font-size: 1.6rem
@@ -52,6 +57,7 @@
         margin: 0
         border-top: 1px solid $grey-primary
         border-bottom: 1px solid $grey-primary
+        transition: all .3s ease-in
     &__technologies
         margin: 16px 0
         flex-grow: 1
