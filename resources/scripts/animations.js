@@ -1,4 +1,6 @@
-var animations = {};
+var animations = {
+    activeSection: 0
+};
 
 // this function is responsible for animation of CONSOLE in INTRO section
 animations.animateIntro = function() {
@@ -27,12 +29,34 @@ animations.createController = function() {
     .on('start', function(){animations.animateScreen();})
     .addTo(controller); // assign the scene to the controller
 
+    animations.triggerActiveSection('#intro', 0);
+    animations.triggerActiveSection('#about', 1);
+    animations.triggerActiveSection('#stack', 2);
+    animations.triggerActiveSection('#projects', 3);
+
+
     new ScrollMagic.Scene({
         triggerElement: '#projects',
         reverse:false,
         offset: (window.innerHeight > 400) ? 200 : 0  // set offset depending on screen height
     })
     .on('start', function(){animations.animateProjects();})
+    .addTo(controller); // assign the scene to the controller
+};
+
+// below function creates triggers so when user scrolls over section it will update animations.activeSection variable
+// then activeSection variable will give info to the 'intro button'
+animations.triggerActiveSection = function(name, sectionNumber) {
+    var controller = new ScrollMagic.Controller();
+    new ScrollMagic.Scene({
+        triggerElement: name,
+        reverse:true,
+        offset: '1px',
+        triggerHook: 0.01
+    })
+    .on('start', function(){
+        animations.activeSection = sectionNumber;
+    })
     .addTo(controller); // assign the scene to the controller
 };
 

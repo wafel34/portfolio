@@ -19,12 +19,11 @@ $(document).ready(function(){
                 $(value).css('left', appContainerOffsetLeft);
             });
         });
-        
-        var sections = ['#intro', '#about', '#stack', '#projects'],
-            counter = 0;
+
+        var sections = ['#intro', '#about', '#stack', '#projects'];
         $(introButton).on('click', function(){
-            counter++;
-            TweenLite.to(window, .5, {scrollTo:sections[counter], ease:Power2.easeOut});
+            var activeSection = animations.activeSection;
+            TweenLite.to(window, .5, {scrollTo:sections[activeSection+1], ease:Power2.easeOut});
         });
         animations.animateIntro();
 

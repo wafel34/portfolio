@@ -33,8 +33,8 @@
     box-shadow: 1px 2px 5px 0px rgba(0,0,0,.5)
     height: 100%
     &:hover
-        > .card__image > .card__header
-            background-color: $orange-light
+        > .card__image > .card__header::before
+            width: 100%
     &__description
         margin: 16px 0
         font-size: 1.6rem
@@ -58,6 +58,19 @@
         border-top: 1px solid $grey-primary
         border-bottom: 1px solid $grey-primary
         transition: all .3s ease-in
+        z-index: 0
+        &::before
+            display: block
+            content: ''
+            position: absolute
+            z-index: -1
+            top: 0
+            left: 0
+            height: 100%
+            width: 0
+            background-color: $orange-light
+            transform-origin: center
+            transition: all .2s ease-in-out
     &__technologies
         margin: 16px 0
         flex-grow: 1
