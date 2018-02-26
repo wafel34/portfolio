@@ -2,6 +2,11 @@ var animations = {
     activeSection: 0
 };
 
+(function(){
+    var tl = new TimelineMax({yoyo:true});
+    tl.to('.question-mark', 1.5, {rotation:180, svgOrigin:'556 698', ease: Bounce.easeOut});
+    tl.to('.question-mark', 1.5, {rotation:0, svgOrigin:'556 698', ease: Bounce.easeOut});
+}());
 // this function is responsible for animation of CONSOLE in INTRO section
 animations.animateIntro = function() {
 
