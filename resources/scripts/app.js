@@ -20,10 +20,10 @@ $(document).ready(function(){
             });
         });
 
-        var sections = ['#intro', '#about', '#stack', '#projects'];
+        var sections = ['#intro', '#about', '#stack', '#projects', '#why-me'];
         $(introButton).on('click', function(){
             var activeSection = animations.activeSection;
-            TweenLite.to(window, .5, {scrollTo:sections[activeSection+1], ease:Power2.easeOut});
+            TweenLite.to(window, 0.5, {scrollTo:sections[activeSection+1], ease:Power2.easeOut});
         });
         animations.animateIntro();
 

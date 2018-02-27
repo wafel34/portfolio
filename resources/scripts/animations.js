@@ -2,11 +2,22 @@ var animations = {
     activeSection: 0
 };
 
-(function(){
-    var tl = new TimelineMax({yoyo:true});
+animations.animateQuestionMark = function(){
+    var tl = new TimelineMax({delay:0.5, repeat: -1});
     tl.to('.question-mark', 1.5, {rotation:180, svgOrigin:'556 698', ease: Bounce.easeOut});
-    tl.to('.question-mark', 1.5, {rotation:0, svgOrigin:'556 698', ease: Bounce.easeOut});
-}());
+    tl.to('.question-mark', 1.5, {rotation:0, svgOrigin:'556 698', ease: Power2.easeInOut, delay: 0.5});
+    tl.to('.question-mark', 0.5, {attr: {fill: '#484848'}});
+    tl.to('.question-mark', 0.5, {attr: {fill: '#ffffff'}});
+    tl.to('.question-mark', 0.5, {attr: {fill: '#484848'}});
+    tl.to('.question-mark', 0.5, {attr: {fill: '#ffffff'}});
+    tl.to('.question-mark', 0.5, {attr: {fill: '#484848'}});
+    tl.to('.question-mark', 1, {attr: {fill: '#ffffff'}});
+    tl.to('.period', 1, {opacity: 1});
+    tl.to('.question-mark', 1, {opacity: 0});
+    tl.set({}, {}, '+=2');
+    tl.to('.question-mark', 1, {opacity: 1});
+    tl.to('.period', 1, {opacity: 0});
+};
 // this function is responsible for animation of CONSOLE in INTRO section
 animations.animateIntro = function() {
 
@@ -46,6 +57,14 @@ animations.createController = function() {
         offset: (window.innerHeight > 400) ? 200 : 0  // set offset depending on screen height
     })
     .on('start', function(){animations.animateProjects();})
+    .addTo(controller); // assign the scene to the controller
+
+    new ScrollMagic.Scene({
+        triggerElement: '#why-me',
+        reverse:false,
+        offset: (window.innerHeight > 400) ? 200 : 0  // set offset depending on screen height
+    })
+    .on('start', function(){animations.animateQuestionMark();})
     .addTo(controller); // assign the scene to the controller
 };
 
@@ -94,5 +113,5 @@ animations.animateScreen = function () {
 
 animations.animateProjects = function() {
     var tl = new TimelineMax();
-    tl.staggerTo('.card-wrapper', 2, {transform: 'translateX(0)', opacity: 1,ease: Bounce.easeOut, y: -500}, .1);
+    tl.staggerTo('.card-wrapper', 2, {transform: 'translateX(0)', opacity: 1,ease: Bounce.easeOut, y: -500}, 0.1);
 };
