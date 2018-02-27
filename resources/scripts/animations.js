@@ -2,22 +2,6 @@ var animations = {
     activeSection: 0
 };
 
-animations.animateQuestionMark = function(){
-    var tl = new TimelineMax({delay:0.5, repeat: -1});
-    tl.to('.question-mark', 1.5, {rotation:180, svgOrigin:'556 698', ease: Bounce.easeOut});
-    tl.to('.question-mark', 1.5, {rotation:0, svgOrigin:'556 698', ease: Power2.easeInOut, delay: 0.5});
-    tl.to('.question-mark', 0.5, {attr: {fill: '#484848'}});
-    tl.to('.question-mark', 0.5, {attr: {fill: '#ffffff'}});
-    tl.to('.question-mark', 0.5, {attr: {fill: '#484848'}});
-    tl.to('.question-mark', 0.5, {attr: {fill: '#ffffff'}});
-    tl.to('.question-mark', 0.5, {attr: {fill: '#484848'}});
-    tl.to('.question-mark', 1, {attr: {fill: '#ffffff'}});
-    tl.to('.period', 1, {opacity: 1});
-    tl.to('.question-mark', 1, {opacity: 0});
-    tl.set({}, {}, '+=2');
-    tl.to('.question-mark', 1, {opacity: 1});
-    tl.to('.period', 1, {opacity: 0});
-};
 // this function is responsible for animation of CONSOLE in INTRO section
 animations.animateIntro = function() {
 
@@ -49,6 +33,8 @@ animations.createController = function() {
     animations.triggerActiveSection('#about', 1);
     animations.triggerActiveSection('#stack', 2);
     animations.triggerActiveSection('#projects', 3);
+    animations.triggerActiveSection('#why-me', 4);
+    animations.triggerActiveSection('#contact', 5);
 
 
     new ScrollMagic.Scene({
@@ -115,3 +101,30 @@ animations.animateProjects = function() {
     var tl = new TimelineMax();
     tl.staggerTo('.card-wrapper', 2, {transform: 'translateX(0)', opacity: 1,ease: Bounce.easeOut, y: -500}, 0.1);
 };
+
+
+animations.animateQuestionMark = function(){
+    var tl = new TimelineMax({delay:0.5, repeat: -1});
+    tl.to('.question-mark', 1.5, {rotation:180, svgOrigin:'556 698', ease: Bounce.easeOut});
+    tl.to('.question-mark', 1.5, {rotation:0, svgOrigin:'556 698', ease: Power2.easeInOut, delay: 0.5});
+    tl.to('.question-mark', 0.5, {attr: {fill: '#484848'}});
+    tl.to('.question-mark', 0.5, {attr: {fill: '#ffffff'}});
+    tl.to('.question-mark', 0.5, {attr: {fill: '#484848'}});
+    tl.to('.question-mark', 0.5, {attr: {fill: '#ffffff'}});
+    tl.to('.question-mark', 0.5, {attr: {fill: '#484848'}});
+    tl.to('.question-mark', 1, {attr: {fill: '#ffffff'}});
+    tl.to('.period', 1, {opacity: 1});
+    tl.to('.question-mark', 1, {opacity: 0});
+    tl.set({}, {}, '+=2');
+    tl.to('.question-mark', 1, {opacity: 1});
+    tl.to('.period', 1, {opacity: 0});
+};
+
+(function() {
+    var tl = new TimelineMax();
+    tl.to('.envelope', 1.5, {scale:0.4,  svgOrigin:'600 600', ease: Power4.easeOut});
+    tl.to('.envelope', 1.5, {rotation: -30,  svgOrigin:'600 600', ease: Power4.easeOut});
+    tl.to('.envelope', 1.5, {x: 5200, y:-5200,  svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
+
+
+}());
