@@ -1,7 +1,7 @@
 .contact
     @extend .section
-    background-color: $orange-dark
-    color: #fff
+    background-color: #EEE
+    color: #000
     z-index: 2
     height: 120vh
     &__text
@@ -10,5 +10,66 @@
         text-align: justify
         width: 100%
 
-.envelope
-    &__shadow
+.form-wrapper
+    width: 100%
+
+.contact-form
+    display: flex
+    flex-direction: column
+    width: 100%
+    padding: 16px 0
+    &__item
+        display: flex
+        justify-content: space-between
+        align-content: flex-start
+        margin-bottom: 10px
+    &__label
+        width: 25%
+        text-align: left
+        padding: 10px
+
+    &__textarea
+        font-size: 1.8rem
+        resize: none
+        height: 100px
+
+    &__input,
+    &__textarea
+        border: none
+        display: block
+        align-self: flex-end
+        flex-grow: 1
+        border-radius: 2px
+        background: white no-repeat
+        padding: 10px
+        box-shadow: 0 3px 1px -2px rgba(0,0,0,.4), 0 2px 2px 0 rgba(0,0,0,.34), 0 1px 5px 0 rgba(0,0,0,.32)
+        background-image: linear-gradient(to bottom, $orange-primary, $orange-primary), linear-gradient(to bottom, white, white)
+        background-size: 0 2px,  100% 1px
+        background-position: 50% 100%, 50% 100%
+        transition: all 0.3s ease-in-out
+        &:focus
+            outline: none
+            background-size: 100% 2px, 100% 1px
+            padding-left: 15px
+
+    &__submit
+        margin-left: auto
+        padding: 8px 20px
+        display: block
+        border: none
+        border-radius: 2px
+        background: $orange-light no-repeat
+        text-transform: uppercase
+        font-weight: 700
+        font-size: 1.6rem
+        color: $grey-primary
+        box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.24), 0 1px 5px 0 rgba(0,0,0,.22)
+        background-image: linear-gradient(to bottom, $orange-primary, $orange-primary), linear-gradient(to bottom, white, white)
+        background-size: 0 3px,  100% 1px
+        background-position: 50% 100%, 50% 100%
+        transition: all 0.3s ease-in-out
+        &:hover,
+        &:focus
+            outline: none
+            background-size: 100% 3px, 100% 1px
+            box-shadow: 0 8px 5px -5px rgba(0,0,0,.3)
