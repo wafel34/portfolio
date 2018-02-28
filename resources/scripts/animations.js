@@ -52,6 +52,14 @@ animations.createController = function() {
     })
     .on('start', function(){animations.animateQuestionMark();})
     .addTo(controller); // assign the scene to the controller
+
+    new ScrollMagic.Scene({
+        triggerElement: '#contact',
+        reverse:false,
+        offset: (window.innerHeight > 400) ? 200 : 0  // set offset depending on screen height
+    })
+    .on('start', function(){animations.animateContact();})
+    .addTo(controller); // assign the scene to the controller
 };
 
 // below function creates triggers so when user scrolls over section it will update animations.activeSection variable
@@ -120,11 +128,17 @@ animations.animateQuestionMark = function(){
     tl.to('.period', 1, {opacity: 0});
 };
 
-(function() {
-    var tl = new TimelineMax();
-    tl.to('.envelope', 1.5, {scale:0.4,  svgOrigin:'600 600', ease: Power4.easeOut});
-    tl.to('.envelope', 1.5, {rotation: -30,  svgOrigin:'600 600', ease: Power4.easeOut});
-    tl.to('.envelope', 1.5, {x: 5200, y:-5200,  svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
-
-
-}());
+animations.animateContact = function(){
+    var tl = new TimelineMax({delay:1});
+    tl.to('.envelope, .envelope__shadows', 2, {scale:0.4,  svgOrigin:'600 600', ease: Power4.easeOut});
+    tl.to('.envelope', 1.5, {x: -5200, y:0,  svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
+    tl.to('.envelope__shadow', 0.5, {attr: {width: '400'},  svgOrigin:'600 600', ease:  Power2.easeInOut}, '-=0.7');
+    tl.to('.envelope__shadow--long', 0.5, {attr: {width: '500'},  svgOrigin:'600 600', ease:  Power2.easeInOut}, '-=0.7');
+    tl.set({}, {}, '+=1');
+    tl.to('.envelope', 0, {opacity: 0,  svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
+    tl.to('.envelope', 0, {x:0, y:0, svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
+    tl.to('.envelope', 0, {scale: 1, svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
+    tl.to('.envelope__shadow, .envelope__shadow--long', 0.5, {opacity: 0,  svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
+    tl.set({}, {}, '+=1');
+    tl.to('.envelope', 1, {opacity: 1,  svgOrigin:'600 600'});
+};
