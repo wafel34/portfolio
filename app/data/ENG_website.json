@@ -84,24 +84,24 @@
     ],
     "whyMeHeader": "Why me?",
     "whyMe": {
-        "1": {
+        "reason_1": {
             "reason": "Professional approach to work.",
             "text": " Anywhere I have worked, I've been valued employee and can prove that with reference letters and contacts."
         },
-        "2": {
+        "reason_2": {
             "reason": "Wiligness to keep improving myself.",
             "text": " My carieer path shows that I always want to learn more and achieve higher goals."
         },
-        "3": {
+        "reason_3": {
             "reason": "English on a very good level.",
             "text": " For 2.5 years I have workd in London, and thanks to that I had ability to practice that language on a daily basis."
         },
-        "4": {
+        "reason_4": {
             "reason": "Ability to deal with problems on my own.",
             "text": " This is where English comes into play again. I'm not limited to information in one language, thus it's easier for me to find a solution to the problem.."
         },
-        "5": {
-            "reason": "Versality or even complexity.",
+        "reason_5": {
+            "reason": "Versality and complexity.",
             "text": " Apart from programming skills my professional life helped me to develop other skills: understadning the business side (not just the technical one), ecommerce and operational experience, and decent skills in other areas of IT."
         }
     },
@@ -110,9 +110,13 @@
     "fillTheForm": "Or you can fill the form below.",
     "form": {
         "name": "Name: * ",
+        "namePlaceholder": "Jon",
         "email": "Email: * ",
-        "companty": "Companty: ",
+        "emailPlaceholder": "jon.smith@corporate.co.uk",
+        "company": "Company: ",
+        "companyPlaceholder": "Company name",
         "message": "Message: ",
+        "messagePlaceholder": "Your message here",
         "send": "Send"
     }
 }

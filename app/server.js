@@ -22,6 +22,12 @@ app.get('/', (req, res) => {
     });
 });
 
+app.get('/pl', (req, res) => {
+    res.render('index', {
+        data: dataPL
+    });
+});
+
 app.get('/en', (req, res) => {
     res.render('index', {
         data: dataEng

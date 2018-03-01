@@ -18,29 +18,29 @@
                 </div>
             </div><!--col-2-->
             <div class="col-2">
-                <h2 class="why-me__header">Want to concact me?</h2>
-                <span class="why-me__text">You can email me at: <a href="mailto:work.pmarcinkowski@gmail.com">work.pmarcinkowski@gmail.com</a></span>
-                <span class="why-me__text">Or you can fill the form below.</span>
+                <h2 class="why-me__header"><%=data.contactHeader%></h2>
+                <span class="why-me__text"><%=data.emailMe%><a href="mailto:work.pmarcinkowski@gmail.com">work.pmarcinkowski@gmail.com</a></span>
+                <span class="why-me__text"><%=data.fillTheForm%></span>
                 <form action="/contact" method="POST" class="form-wrapper">
                     <div class="contact-form">
                         <div class="contact-form__item">
-                            <label class="contact-form__label" for="#contact-name">Name: * </label>
-                            <input type="text" name="contact-name" id="contact-name" class="contact-form__input" placeholder="Jon" required>
+                            <label class="contact-form__label" for="#contact-name"><%=data.form.name%></label>
+                            <input type="text" name="contact-name" id="contact-name" class="contact-form__input" placeholder="<%=data.form.namePlaceholder%>" required>
                         </div>
                         <div class="contact-form__item">
-                            <label class="contact-form__label" for="#contact-email">Email: * </label>
-                            <input type="email" name="contact-email" id="contact-email" class="contact-form__input" placeholder="jon.smith@corporate.co.uk" required>
+                            <label class="contact-form__label" for="#contact-email"><%=data.form.email%></label>
+                            <input type="email" name="contact-email" id="contact-email" class="contact-form__input" placeholder="<%=data.form.emailPlaceholder%>" required>
                         </div>
                         <div class="contact-form__item">
-                            <label class="contact-form__label" for="#contact-company">Company: </label>
-                            <input type="email" name="contact-company" id="contact-company" class="contact-form__input" placeholder="Company name">
+                            <label class="contact-form__label" for="#contact-company"><%=data.form.company%></label>
+                            <input type="email" name="contact-company" id="contact-company" class="contact-form__input" placeholder="<%=data.form.companyPlaceholder%>">
                         </div>
                         <div class="contact-form__item">
-                            <label class="contact-form__label" for="#contact-message">Message: * </label>
-                            <textarea name="contact-message" id="contact-message" class="contact-form__textarea" placeholder="Your message here" maxlength="300" required></textarea>
+                            <label class="contact-form__label" for="#contact-message"><%=data.form.message%></label>
+                            <textarea name="contact-message" id="contact-message" class="contact-form__textarea" placeholder="<%=data.form.messagePlaceholder%>" maxlength="300" required></textarea>
                         </div>
                         <div class="contact-form__item">
-                            <button type="submit" class="contact-form__submit">Send</button>
+                            <button type="submit" class="contact-form__submit"><%=data.form.send%></button>
                         </div>
                     </div>
                 </form>

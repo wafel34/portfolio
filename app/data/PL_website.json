@@ -82,37 +82,41 @@
             "code": "https://codepen.io/wafel34/pen/BQOaxB"
         }
     ],
-    "whyMeHeader": "Why me?",
+    "whyMeHeader": "Dlaczego ja?",
     "whyMe": {
-        "1": {
-            "reason": "Professional approach to work.",
-            "text": " Anywhere I have worked, I've been valued employee and can prove that with reference letters and contacts."
+        "reason_1": {
+            "reason": "Profesjonalne podejście do pracy.",
+            "text": " Gdziekolwiek pracowałem byłem cenionym pracownikiem, co mogę potwierdzić referencjami."
         },
-        "2": {
-            "reason": "Wiligness to keep improving myself.",
-            "text": " My carieer path shows that I always want to learn more and achieve higher goals."
+        "reason_2": {
+            "reason": "Chęć ciągłego rozwoju.",
+            "text": " Moja historia zawodowa pokazuje, że zawsze staram się uczyć nowych rzeczy i stawiać poprzeczkę coraz wyżej."
         },
-        "3": {
-            "reason": "English on a very good level.",
-            "text": " For 2.5 years I have workd in London, and thanks to that I had ability to practice that language on a daily basis."
+        "reason_3": {
+            "reason": "Angielski na bardzo dobrym poziomie.",
+            "text": " Przez ponad 2.5 roku pracowałem w Londynie co pozwoliło mi paktykować ten język każdego dnia."
         },
-        "4": {
-            "reason": "Ability to deal with problems on my own.",
-            "text": " This is where English comes into play again. I'm not limited to information in one language, thus it's easier for me to find a solution to the problem.."
+        "reason_4": {
+            "reason": "Umiejętność samodzielnego radzenia sobie z problemami.",
+            "text": " Po raz kolejny pomaga mi w tym język angielski, gdyż nie jestem ograniczony do informacji w jednym języku."
         },
-        "5": {
-            "reason": "Versality or even complexity.",
-            "text": " Apart from programming skills my professional life helped me to develop other skills: understadning the business side (not just the technical one), ecommerce and operational experience, and decent skills in other areas of IT."
+        "reason_5": {
+            "reason": "Elastyczność i kompleksowość.",
+            "text": " Oprócz moich obecnych umiejętności programowania moje życie zawodowe pozwoliło mi rozwinąć także inne umiejętności: zrozumienie biznesowej strony projektu (nie tylko technicznej), doświadczenie w Ecommerce a także w pracy z danymi oraz przyzwoite umiejętności w innych rejonach IT."
         }
     },
-    "contactHeader": "Want to concact me?",
-    "emailMe": "You can email me at:",
-    "fillTheForm": "Or you can fill the form below.",
+    "contactHeader": "Chcesz się ze mną skontaktować?",
+    "emailMe": "Możesz wysłać email na adres:",
+    "fillTheForm": "Lub wypełnić formularz poniżej.",
     "form": {
-        "name": "Name: * ",
+        "name": "Imię: * ",
+        "namePlaceholder": "Jan",
         "email": "Email: * ",
-        "companty": "Companty: ",
-        "message": "Message: ",
-        "send": "Send"
+        "emailPlaceholder": "jan.kowalski@domena.pl",
+        "company": "Firma: ",
+        "companyPlaceholder": "Nazwa firmy",
+        "message": "Wiadomość: ",
+        "messagePlaceholder": "Wpisz tutaj wiadomość",
+        "send": "Wyślij"
     }
 }
