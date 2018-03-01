@@ -62,3 +62,37 @@
         &:focus
             background-color: rgba($orange-light, .2)
             transform: scale(1.05)
+
+@media screen and (max-width: 700px)
+    .navbar
+        &__link
+            flex-direction: column
+            padding: 6px 10px
+
+
+
+@media screen and (max-width: 500px)
+    .navbar
+        padding: 0
+        justify-content: center
+        &__link
+            flex-direction: column
+            padding: 6px
+
+    .languages
+        &__button
+            padding: 15px 10px
+
+@media screen and (max-width: 390px)
+    .navbar
+        padding: 0
+        justify-content: center
+        &__link
+            flex-direction: column
+            padding: 6px 3px
+            span
+                font-size: 1.4rem
+
+    .languages
+        &__button
+            padding: 15px 10px

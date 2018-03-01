@@ -1,7 +1,7 @@
 <section class="contact" id="contact">
     <div class="app-container">
         <div class="wrapper">
-            <div class="col-2">
+            <div class="col-2 col-2--to-hide">
                 <div class="svg-wrapper">
                 <svg class="svg_image" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 1200 1200" style="enable-background:new 0 0 26.799 26.799;" xml:space="preserve" stroke-width="10" stroke="black" fill="none">
@@ -17,10 +17,10 @@
                 </svg>
                 </div>
             </div><!--col-2-->
-            <div class="col-2">
-                <h2 class="why-me__header"><%=data.contactHeader%></h2>
-                <span class="why-me__text"><%=data.emailMe%><a href="mailto:work.pmarcinkowski@gmail.com">work.pmarcinkowski@gmail.com</a></span>
-                <span class="why-me__text"><%=data.fillTheForm%></span>
+            <div class="col-2 col-2--to-scroll">
+                <h2 class="contact__header"><%=data.contactHeader%></h2>
+                <span class="contact__text"><%=data.emailMe%><a href="mailto:work.pmarcinkowski@gmail.com">work.pmarcinkowski@gmail.com</a></span>
+                <span class="contact__text"><%=data.fillTheForm%></span>
                 <form action="/contact" method="POST" class="form-wrapper">
                     <div class="contact-form">
                         <div class="contact-form__item">
@@ -30,10 +30,6 @@
                         <div class="contact-form__item">
                             <label class="contact-form__label" for="#contact-email"><%=data.form.email%></label>
                             <input type="email" name="contact-email" id="contact-email" class="contact-form__input" placeholder="<%=data.form.emailPlaceholder%>" required>
-                        </div>
-                        <div class="contact-form__item">
-                            <label class="contact-form__label" for="#contact-company"><%=data.form.company%></label>
-                            <input type="email" name="contact-company" id="contact-company" class="contact-form__input" placeholder="<%=data.form.companyPlaceholder%>">
                         </div>
                         <div class="contact-form__item">
                             <label class="contact-form__label" for="#contact-message"><%=data.form.message%></label>

@@ -2,7 +2,7 @@
     @extend .section
     background-color: #EEE
     color: #000
-    z-index: 2
+    z-index: 5
     height: 120vh
     &__text
         color: $grey-dark
@@ -73,3 +73,33 @@
             outline: none
             background-size: 100% 3px, 100% 1px
             box-shadow: 0 8px 5px -5px rgba(0,0,0,.3)
+
+@media screen and (max-width: 1000px)
+    .contact
+        &__header
+            display: none
+    .col-2
+        &--to-scroll
+            overflow-y: auto
+            justify-content: center
+    .contact-form
+        &__item
+            flex-direction: column
+            justify-content: center
+            align-items: flex-start
+        &__label
+            width: 100%
+        &__input,
+        &__textarea
+            width: 100%
+
+@media screen and (max-width: 585px)
+    .contact
+        height: 100vh
+
+
+    .col-2
+        &--to-scroll
+            overflow-y: auto
+        &--to-hide
+            display: none

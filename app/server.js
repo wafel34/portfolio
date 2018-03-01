@@ -14,13 +14,9 @@ app.set('views', './app');
 app.set('dataPL', dataPL);
 
 app.use(express.static('app/public'));
+app.use('/contact', contactRoute);
 
 
-app.get('/', (req, res) => {
-    res.render('index', {
-        data: dataPL
-    });
-});
 
 app.get('/pl', (req, res) => {
     res.render('index', {
@@ -34,8 +30,9 @@ app.get('/en', (req, res) => {
     });
 });
 
-app.use('/contact', contactRoute);
-
+app.get('/*', (req, res) => {
+    res.redirect('/pl');
+});
 
 
 app.listen(app.get('PORT'), () => {
