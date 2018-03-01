@@ -1,25 +1,25 @@
 {
-    "lang": "pl-PL",
+    "lang": "en",
     "navbar": {
-        "home": "Główna",
-        "projects": "Projekty",
-        "stack": "Technologie",
-        "contact": "Kontakt"
+        "home": "Home",
+        "projects": "Projects",
+        "stack": "Stack",
+        "contact": "Contact"
     },
-    "consoleText": "$: witaj!",
+    "consoleText": "$: welcome!",
     "intro": {
-        "welcome": "Cześć, jestem Paweł!",
-        "text": "Jeśli odwiedziłeś tą stronę, to całkiem możliwe, że szukasz  Junior Front-End Developera. Pozwól, że ci w tym pomogę. Przewniń w dół jeśli jesteś zainteresowany."
+        "welcome": "Hi, I'm Paweł!",
+        "text": " If you visited this website, it's quite possible that you are looking for a front-end developer. Let me help you with that. Scroll down if you're interested."
     },
-    "aboutHeader": "Mogę być twoim wyborem!",
-    "aboutText1": "Kiedy buduję strony, zawsze staram się tworzyć produkty na moim najwyższym poziomie. Jestem zawsze pozytywnie nastawiony do nowych wyzwań i staram się podnosić swoje umiejętności przy każdym projekcie. Taki już jestem.",
-    "aboutText2": "Jeśli chcesz sprawdzić jakich technologii używam, przewiń w dół.",
-    "stackHeader": "Technologie:",
-    "projectsHeader": "Projekty",
+    "aboutHeader": "I can be your choice!",
+    "aboutText1": "When I build websites I always seek to deliver products on my higest possible level. I'm always positive about new challenges and try to improve my skills on every project. This is who I am.",
+    "aboutText2": "If you want to check my technological stack, please scroll down.",
+    "stackHeader": "My stack:",
+    "projectsHeader": "Projects",
     "projects": [
         {
             "name": "Recipes App",
-            "description": "Applikacja Full Stack zbudowana w Angularze.",
+            "description": "Full stack application built in Angular.",
             "technologies": "Angular (2+, CLI), Sass, ExpressJS, MongoDB",
             "image": "images/recipes-app.jpg",
             "live": "https://recipes-angular-app.herokuapp.com/",
@@ -27,7 +27,7 @@
         },
         {
             "name": "Ski Jumping",
-            "description": "Strona oparta o ExpressJs, oraz EJS jako silnik szablonów.",
+            "description": "Website built with ExpressJS and EJS as a view engine.",
             "technologies": "ExpressJS, EJS, Sass, Gulp",
             "image": "images/skijumping.jpg",
             "live": "https://skijumping.herokuapp.com/",
@@ -35,7 +35,7 @@
         },
         {
             "name": "Herbrand Street",
-            "description": "Strona zbudowana w ‘czystym’ JS. Użyłem także API od Google Maps.",
+            "description": "Built with vanilla JS. Used Google Maps API as well.",
             "technologies": "Javascript, ExpressJS, External API, Accesibility, Sass, CSS Grid",
             "image": "images/herbrand.jpg",
             "live": "http://herbrandapartment.herokuapp.com/",
@@ -43,7 +43,7 @@
         },
         {
             "name": "Meble GK",
-            "description": "Strona zbudowana przy użyciu Bootstrap 3.",
+            "description": "Website built with Bootstrap 3.",
             "technologies": "Bootstrap 3, Gulp",
             "image": "images/meble.jpg",
             "live": "https://wafel34.github.io/meble_gk/",
@@ -51,7 +51,7 @@
         },
         {
             "name": "Freshness",
-            "description": "PSD do HTML.",
+            "description": "PSD to HTML.",
             "technologies": "Sass, BEM",
             "image": "images/freshness.jpg",
             "live": "https://wafel34.github.io/Freshness/",
@@ -59,7 +59,7 @@
         },
         {
             "name": "Simon Game",
-            "description": "Użytkownik ma za zadanie powtarzać dzwięki zagrane przez komputer.",
+            "description": "User repeats sounds played by computer.",
             "technologies": "Javascript",
             "image": "images/simon.jpg",
             "live": "https://codepen.io/wafel34/full/RKebWy/",
@@ -67,14 +67,14 @@
         },
         {
             "name": "TicTacToe",
-            "description": "Starszy projekt. Kółko, krzyżyk z komputerem.",
+            "description": "Older project. Game where user play against computer.",
             "technologies": "Javascript",
             "image": "images/tictactoe.jpg",
             "live": "https://codepen.io/wafel34/full/NdzKVa/",
             "code": "https://codepen.io/wafel34/pen/NdzKVa"
         },
         {
-            "name": "Kolejny starszy projekt. Prosty kalkulator.",
+            "name": "Calculator",
             "description": "Another older project, simple calculator.",
             "technologies": "Javascript",
             "image": "images/calc.jpg",
