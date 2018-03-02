@@ -1,3 +1,4 @@
+var $ = window.jQuery = require('jQuery');
 var animations = {
     activeSection: 0
 };

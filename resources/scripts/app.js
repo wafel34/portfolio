@@ -1,4 +1,3 @@
-var $ = window.jQuery = require('jQuery');
 
 $(document).ready(function(){
 
@@ -6,7 +5,8 @@ $(document).ready(function(){
     var fixedDiv = $('.svg-wrapper'),
         appContainerOffsetLeft = $('.app-container')[0].offsetLeft,
         fixedDivParent = fixedDiv[0].parentElement.clientWidth,
-        introButton = $('#intro-button');
+        introButton = $('#intro-button'),
+        navButton = ('.navbar__link');
         $.each(fixedDiv, function(item, value){
             $(value).width(fixedDivParent);
             $(value).css({'opacity': '1', 'left': appContainerOffsetLeft});
@@ -27,5 +27,9 @@ $(document).ready(function(){
         });
         animations.animateIntro();
 
-
+        $(navButton).on('click', function(e){
+            e.preventDefault();
+            var elem = $(this).attr('href');
+            TweenLite.to(window, 0.5, {scrollTo:elem, ease:Power2.easeOut});
+        });
 });
