@@ -7,6 +7,11 @@ const dataPL = require('./data/PL_website.json');
 const dataEng = require('./data/ENG_website.json');
 const contactRoute = require('./contact-route');
 
+require('dotenv').config();
+
+
+
+
 app.set('PORT', (process.env.PORT || 3000));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');

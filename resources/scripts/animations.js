@@ -1,6 +1,7 @@
 var $ = window.jQuery = require('jQuery');
 var animations = {
-    activeSection: 0
+    activeSection: 0,
+    tlContact: new TimelineMax()
 };
 
 // this function is responsible for animation of CONSOLE in INTRO section
@@ -130,16 +131,50 @@ animations.animateQuestionMark = function(){
 };
 
 animations.animateContact = function(){
-    var tl = new TimelineMax({delay:1});
-    tl.to('.envelope, .envelope__shadows', 2, {scale:0.4,  svgOrigin:'600 600', ease: Power4.easeOut});
-    tl.to('.envelope', 1.5, {x: -5200, y:0,  svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
-    tl.to('.envelope__shadow', 0.5, {attr: {width: '400'},  svgOrigin:'600 600', ease:  Power2.easeInOut}, '-=0.7');
-    tl.to('.envelope__shadow--long', 0.5, {attr: {width: '500'},  svgOrigin:'600 600', ease:  Power2.easeInOut}, '-=0.7');
-    tl.set({}, {}, '+=1');
-    tl.to('.envelope', 0, {opacity: 0,  svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
-    tl.to('.envelope', 0, {x:0, y:0, svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
-    tl.to('.envelope', 0, {scale: 1, svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
-    tl.to('.envelope__shadow, .envelope__shadow--long', 0.5, {opacity: 0,  svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
-    tl.set({}, {}, '+=1');
-    tl.to('.envelope', 1, {opacity: 1,  svgOrigin:'600 600'});
+    this.tlContact.to('.envelope, .envelope__shadows', 2, {scale:0.4,  svgOrigin:'600 600', ease: Power4.easeOut});
+    this.tlContact.to('.envelope', 1.5, {x: -5200, y:0,  svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
+    this.tlContact.to('.envelope__shadow', 0.5, {attr: {width: '400'},  svgOrigin:'600 600', ease:  Power2.easeInOut}, '-=0.7');
+    this.tlContact.to('.envelope__shadow--long', 0.5, {attr: {width: '500'},  svgOrigin:'600 600', ease:  Power2.easeInOut}, '-=0.7');
+    this.tlContact.set({}, {}, '+=1');
+    this.tlContact.to('.envelope', 0, {opacity: 0,  svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
+    this.tlContact.to('.envelope', 0, {x:0, y:0, svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
+    this.tlContact.to('.envelope', 0, {scale: 1, svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
+    this.tlContact.to('.envelope__shadow, .envelope__shadow--long', 0.5, {opacity: 0,  svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
+    this.tlContact.set({}, {}, '+=1');
+    this.tlContact.to('.envelope', 1, {opacity: 1,  svgOrigin:'600 600'});
+};
+
+
+
+animations.sendEmail = {
+    sendingEmail: new TimelineMax(),
+    spinning: new TimelineMax({repeat: -1}),
+    emailSentAnimation: new TimelineMax(),
+    emailNotSentAnimation: new TimelineMax(),
+    emailSending: function() {
+        animations.tlContact.stop();
+        this.spinning.restart();
+        this.emailSentAnimation.to('.envelope, .envelope__shadows', 0, {scale: 1, opacity: 0, x: 0, y: 0});
+        this.emailNotSentAnimation.to('.envelope, .envelope__shadows', 0, {scale: 1, opacity: 0, x: 0, y: 0});
+        this.spinning.to('.circle-spinning', 0 , {opacity: 1});
+        this.spinning.to('.circle-spinning', 1 , {rotation: 360, svgOrigin:'600 600', ease:  Power2.easeInOut});
+    },
+    emailSent: function() {
+        this.spinning.pause();
+        this.emailSentAnimation.to('.circle-spinning', 1, {'stroke-dasharray': '2000'});
+        this.emailSentAnimation.to('.email-sent', 1, {opacity: 1}, '-=0.5');
+        this.emailSentAnimation.to('.email-sent', 1, {opacity: 1});
+        this.emailSentAnimation.to('.email-sent, .circle-spinning', 0, {opacity: 0});
+        this.emailSentAnimation.to('.circle-spinning', 0, {'stroke-dasharray': '100'});
+        this.emailSentAnimation.to('.envelope', 1, {opacity: 1});
+    },
+    emailNotSent: function() {
+        this.spinning.pause();
+        this.emailNotSentAnimation.to('.circle-spinning', 1, {'stroke-dasharray': '2000'});
+        this.emailNotSentAnimation.to('.email-not-sent', 1, {opacity: 1}, '-=0.5');
+        this.emailNotSentAnimation.to('.email-not-sent', 1, {opacity: 1});
+        this.emailNotSentAnimation.to('.email-not-sent, .circle-spinning', 0, {opacity: 0});
+        this.emailNotSentAnimation.to('.circle-spinning', 0, {'stroke-dasharray': '100'});
+        this.emailNotSentAnimation.to('.envelope', 1, {opacity: 1});
+    }
 };

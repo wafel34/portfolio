@@ -14,26 +14,40 @@
                          <rect class="envelope__shadow--long" x="650" y=500 width="0" height="3"/>
                          <rect class="envelope__shadow" x="600" y=600 width="0" height="3"/>
                      </g>
+
+                     <circle class="circle-spinning" cx="600" cy="600" r="300" stroke-dasharray="100"/>
+                     <g class="email-sent">
+                         <circle cx="500" cy="500" r="10"/>
+                         <circle cx="700" cy="500" r="10"/>
+                         <path d="M500, 700 A200 300 0 0 0 700 700"/>
+                     </g>
+                     <g class="email-not-sent" >
+                         <circle cx="500" cy="500" r="10"/>
+                         <circle cx="700" cy="500" r="10"/>
+                         <path d="M550, 650 l100,100"/>
+                         <path d="M650, 650 l-100,100"/>
+                     </g>
                 </svg>
+
                 </div>
             </div><!--col-2-->
             <div class="col-2 col-2--to-scroll">
                 <h2 class="contact__header"><%=data.contactHeader%></h2>
                 <span class="contact__text"><%=data.emailMe%><a href="mailto:work.pmarcinkowski@gmail.com">work.pmarcinkowski@gmail.com</a></span>
                 <span class="contact__text"><%=data.fillTheForm%></span>
-                <form action="/contact" method="POST" class="form-wrapper">
+                <form action="" method="POST" class="form-wrapper" id="contactForm">
                     <div class="contact-form">
                         <div class="contact-form__item">
-                            <label class="contact-form__label" for="#contact-name"><%=data.form.name%></label>
-                            <input type="text" name="contact-name" id="contact-name" class="contact-form__input" placeholder="<%=data.form.namePlaceholder%>" required>
+                            <label class="contact-form__label" for="#contactName"><%=data.form.name%></label>
+                            <input type="text" name="contactName" id="contactName" class="contact-form__input" placeholder="<%=data.form.namePlaceholder%>" required>
                         </div>
                         <div class="contact-form__item">
-                            <label class="contact-form__label" for="#contact-email"><%=data.form.email%></label>
-                            <input type="email" name="contact-email" id="contact-email" class="contact-form__input" placeholder="<%=data.form.emailPlaceholder%>" required>
+                            <label class="contact-form__label" for="#contactEmail"><%=data.form.email%></label>
+                            <input type="contactEmail" name="contactEmail" id="contactEmail" class="contact-form__input" placeholder="<%=data.form.emailPlaceholder%>" required>
                         </div>
                         <div class="contact-form__item">
-                            <label class="contact-form__label" for="#contact-message"><%=data.form.message%></label>
-                            <textarea name="contact-message" id="contact-message" class="contact-form__textarea" placeholder="<%=data.form.messagePlaceholder%>" maxlength="300" required></textarea>
+                            <label class="contact-form__label" for="#contactMessage"><%=data.form.message%></label>
+                            <textarea name="contactMessage" id="contactMessage" class="contact-form__textarea" placeholder="<%=data.form.messagePlaceholder%>" maxlength="300" required></textarea>
                         </div>
                         <div class="contact-form__item">
                             <button type="submit" class="contact-form__submit"><%=data.form.send%></button>
