@@ -43,7 +43,7 @@
                         </div>
                         <div class="contact-form__item">
                             <label class="contact-form__label" for="#contactEmail"><%=data.form.email%></label>
-                            <input type="contactEmail" name="contactEmail" id="contactEmail" class="contact-form__input" placeholder="<%=data.form.emailPlaceholder%>" required>
+                            <input type="email" name="contactEmail" id="contactEmail" class="contact-form__input" placeholder="<%=data.form.emailPlaceholder%>" required>
                         </div>
                         <div class="contact-form__item">
                             <label class="contact-form__label" for="#contactMessage"><%=data.form.message%></label>
@@ -57,4 +57,13 @@
             </div><!--col-2-->
         </div><!--wrapper controls clipping-->
     </div><!--app-conainer controls the width-->
+    <div class="snackbar-success">
+        <span class="snackbar-success__message">Email has been sent. Thank you!</span>
+
+    </div>
+    <div class="snackbar-fail">
+            <span class="snackbar-fail__message">Something went wrong...</span>
+            <span class="snackbar-fail__message">Please try again or send email manually.</span>
+        </div>
+    </div>
 </section>

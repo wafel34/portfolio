@@ -57,25 +57,24 @@
     &__back
         background-color: $grey-primary
 
-    // row of images inside the technologies container
-    .images-row
-        height: 50%
-        display: flex
-        justify-content: space-around
-        align-items: center
-        flex-wrap: wrap
-        padding: 10px 0
-        overflow: hidden
-        box-shadow: 0px 3px 3px -3px rgba(255,255,255,1)
-        &__image
-            max-height: 50%
+// row of images inside the technologies container
+.images-row
+    height: 50%
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+    padding: 10px 0
+    overflow: hidden
+    box-shadow: 0px 3px 3px -3px rgba(255,255,255,1)
+    &__image
+        max-height: 50%
 
 
 // MEDIA QUERIES
 
 
 @media screen and (max-width: 585px)
-
     .app-container
         &--flex
             flex-direction: column
@@ -90,20 +89,22 @@
         position: relative
         align-self: stretch
         margin: 0
+        height: inherit
         &__front,
         &__back
             position: static
+        &__front
+            width: 100%
+            border-right: none
+            height: auto
 
     .image-right,
     .image-left
         display: none
 
-    .technologies
-        &__front
-            width: 100%
-            border-right: none
-
     .images-row
+        height: auto
+        box-shadow: none
         &__image
             width: 50%
             transform: scale(0.5)

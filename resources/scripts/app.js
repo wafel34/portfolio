@@ -21,10 +21,10 @@ $(document).ready(function(){
             });
         });
 
-        var sections = ['#intro', '#about', '#stack', '#projects', '#why-me','#contact'];
+        var sections = ['#intro', '#about', '#stack', '#projects', '#why-me','#contact', '#footer'];
         $(introButton).on('click', function(){
             var activeSection = animations.activeSection;
-            TweenLite.to(window, 0.5, {scrollTo:sections[activeSection+1], ease:Power2.easeOut});
+            TweenLite.to(window, 0.5, {scrollTo:{y:sections[activeSection+1], offsetY:-2}, ease:Power2.easeOut});
         });
         animations.animateIntro();
 
@@ -36,6 +36,7 @@ $(document).ready(function(){
 
         $(contactForm).on('submit', function(e){
             e.preventDefault();
+            $('.contact-form__submit').attr('disabled',true);
             animations.sendEmail.emailSending();
             $.post('/contact', {
                 contactName: e.target.contactName.value,
@@ -44,11 +45,15 @@ $(document).ready(function(){
             })
             .done( function(msg) {
                 console.log(msg);
+
+                $('.contact-form__submit').attr('disabled',false);
                 animations.sendEmail.emailSent();
                 e.target.contactName.value = '';
                 e.target.contactEmail.value = '';
                 e.target.contactMessage.value = '';
             }).fail(function(error) {
+
+                $('.contact-form__submit').attr('disabled',false);
                 animations.sendEmail.emailNotSent();
             });
 

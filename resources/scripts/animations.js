@@ -72,7 +72,7 @@ animations.triggerActiveSection = function(name, sectionNumber) {
         triggerElement: name,
         reverse:true,
         offset: '1px',
-        triggerHook: 0.01
+        triggerHook: 0
     })
     .on('start', function(){
         animations.activeSection = sectionNumber;
@@ -131,6 +131,7 @@ animations.animateQuestionMark = function(){
 };
 
 animations.animateContact = function(){
+    this.tlContact.set({}, {}, '+=0.5');
     this.tlContact.to('.envelope, .envelope__shadows', 2, {scale:0.4,  svgOrigin:'600 600', ease: Power4.easeOut});
     this.tlContact.to('.envelope', 1.5, {x: -5200, y:0,  svgOrigin:'600 600', ease:  Back.easeIn.config(1)});
     this.tlContact.to('.envelope__shadow', 0.5, {attr: {width: '400'},  svgOrigin:'600 600', ease:  Power2.easeInOut}, '-=0.7');
@@ -151,30 +152,51 @@ animations.sendEmail = {
     spinning: new TimelineMax({repeat: -1}),
     emailSentAnimation: new TimelineMax(),
     emailNotSentAnimation: new TimelineMax(),
+    snackbarSucess: new TimelineMax(),
+    snackbarFail: new TimelineMax(),
     emailSending: function() {
         animations.tlContact.stop();
         this.spinning.restart();
         this.emailSentAnimation.to('.envelope, .envelope__shadows', 0, {scale: 1, opacity: 0, x: 0, y: 0});
         this.emailNotSentAnimation.to('.envelope, .envelope__shadows', 0, {scale: 1, opacity: 0, x: 0, y: 0});
         this.spinning.to('.circle-spinning', 0 , {opacity: 1});
+        this.spinning.to('.col-2--to-scroll', 0 , {opacity: 0.2});
         this.spinning.to('.circle-spinning', 1 , {rotation: 360, svgOrigin:'600 600', ease:  Power2.easeInOut});
     },
     emailSent: function() {
         this.spinning.pause();
+        this.emailSentAnimation.to('.col-2--to-scroll', 0.5 , {opacity: 1});
         this.emailSentAnimation.to('.circle-spinning', 1, {'stroke-dasharray': '2000'});
         this.emailSentAnimation.to('.email-sent', 1, {opacity: 1}, '-=0.5');
         this.emailSentAnimation.to('.email-sent', 1, {opacity: 1});
         this.emailSentAnimation.to('.email-sent, .circle-spinning', 0, {opacity: 0});
         this.emailSentAnimation.to('.circle-spinning', 0, {'stroke-dasharray': '100'});
         this.emailSentAnimation.to('.envelope', 1, {opacity: 1});
+
+        this.showSnackbarSucess();
     },
     emailNotSent: function() {
         this.spinning.pause();
+        this.emailNotSentAnimation.to('.col-2--to-scroll', 0.5 , {opacity: 1});
         this.emailNotSentAnimation.to('.circle-spinning', 1, {'stroke-dasharray': '2000'});
         this.emailNotSentAnimation.to('.email-not-sent', 1, {opacity: 1}, '-=0.5');
         this.emailNotSentAnimation.to('.email-not-sent', 1, {opacity: 1});
         this.emailNotSentAnimation.to('.email-not-sent, .circle-spinning', 0, {opacity: 0});
         this.emailNotSentAnimation.to('.circle-spinning', 0, {'stroke-dasharray': '100'});
         this.emailNotSentAnimation.to('.envelope', 1, {opacity: 1});
+
+        this.showSnackbarFail();
+    },
+    showSnackbarSucess: function() {
+        this.snackbarSucess.to('.snackbar-success', 0, {visibility: 'visible'});
+        this.snackbarSucess.to('.snackbar-success', 0.5, {bottom: '0', ease:  Power2.easeInOut});
+        this.snackbarSucess.to('.snackbar-success', 0.5, {bottom: '-50px', ease:  Power2.easeInOut}, '+=3');
+        this.snackbarSucess.to('.snackbar-success', 0, {visibility: 'hidden'});
+    },
+    showSnackbarFail: function() {
+        this.snackbarFail.to('.snackbar-fail', 0, {visibility: 'visible'});
+        this.snackbarFail.to('.snackbar-fail', 0.5, {bottom: '0', ease:  Power2.easeInOut});
+        this.snackbarFail.to('.snackbar-fail', 0.5, {bottom: '-50px', ease:  Power2.easeInOut}, '+=3');
+        this.snackbarFail.to('.snackbar-fail', 0, {visibility: 'hidden'});
     }
 };

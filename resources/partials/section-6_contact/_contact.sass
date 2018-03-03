@@ -80,6 +80,36 @@
 .email-not-sent
     opacity: 0
 
+
+.snackbar-success,
+.snackbar-fail
+    position: fixed
+    bottom: 0
+    width: 360px
+    height: 50px
+    border-top-left-radius: 2px
+    border-top-right-radius: 2px
+    left: 50%
+    transform: translateX(-50%)
+    background: $grey-primary
+    text-align: center
+    color: $orange-light
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    &__message
+        font-size: 1.6rem
+        display: block
+
+.snackbar-fail
+    bottom: -50px
+    visibility: hidden
+
+.snackbar-success
+    bottom: -50px
+    visibility: hidden
+
 @media screen and (max-width: 1000px)
     .contact
         &__header
