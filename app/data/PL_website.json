@@ -12,7 +12,7 @@
         "text": "Jeśli odwiedziłeś tą stronę, to całkiem możliwe, że szukasz  Junior Front-End Developera. Pozwól, że ci w tym pomogę. Przewniń w dół jeśli jesteś zainteresowany."
     },
     "aboutHeader": "Mogę być twoim wyborem!",
-    "aboutText1": "Kiedy buduję strony, zawsze staram się tworzyć produkty na moim najwyższym poziomie. Jestem zawsze pozytywnie nastawiony do nowych wyzwań i staram się podnosić swoje umiejętności przy każdym projekcie. Taki już jestem.",
+    "aboutText1": "Kiedy buduję strony, zawsze staram się tworzyć produkty na moim najwyższym poziomie. Jestem zawsze pozytywnie nastawiony do nowych wyzwań i staram się podnosić swoje umiejętności przy każdym projekcie.",
     "aboutText2": "Jeśli chcesz sprawdzić jakich technologii używam, przewiń w dół.",
     "stackHeader": "Technologie:",
     "projectsHeader": "Projekty",
@@ -66,7 +66,7 @@
             "code": "https://codepen.io/wafel34/pen/RKebWy"
         },
         {
-            "name": "TicTacToe",
+            "name": "Kółko Krzyżyk",
             "description": "Starszy projekt. Kółko, krzyżyk z komputerem.",
             "technologies": "Javascript",
             "image": "images/tictactoe.jpg",
@@ -74,8 +74,8 @@
             "code": "https://codepen.io/wafel34/pen/NdzKVa"
         },
         {
-            "name": "Kolejny starszy projekt. Prosty kalkulator.",
-            "description": "Another older project, simple calculator.",
+            "name": "Kalkulator",
+            "description": "Prosty kalkulator, jeden ze starszych projektów.",
             "technologies": "Javascript",
             "image": "images/calc.jpg",
             "live": "https://codepen.io/wafel34/full/BQOaxB/",
