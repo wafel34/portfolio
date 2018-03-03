@@ -85,24 +85,20 @@
     "whyMeHeader": "Dlaczego ja?",
     "whyMe": {
         "reason_1": {
-            "reason": "Profesjonalne podejście do pracy.",
-            "text": " Gdziekolwiek pracowałem byłem cenionym pracownikiem, co mogę potwierdzić referencjami."
+            "reason": "Profesjonalizm.",
+            "text": " Zawsze poważnie traktuję swoje obowiązki co mogę to potwierdzić referencjami."
         },
         "reason_2": {
-            "reason": "Chęć ciągłego rozwoju.",
-            "text": " Moja historia zawodowa pokazuje, że zawsze staram się uczyć nowych rzeczy i stawiać poprzeczkę coraz wyżej."
-        },
-        "reason_3": {
-            "reason": "Angielski na bardzo dobrym poziomie.",
+            "reason": "Bardzo dobry angielski",
             "text": " Przez ponad 2.5 roku pracowałem w Londynie co pozwoliło mi paktykować ten język każdego dnia."
         },
-        "reason_4": {
-            "reason": "Umiejętność samodzielnego radzenia sobie z problemami.",
-            "text": " Po raz kolejny pomaga mi w tym język angielski, gdyż nie jestem ograniczony do informacji w jednym języku."
+        "reason_3": {
+            "reason": "Lubię to robić.",
+            "text": " Ponad 360 commitów na GitHubie w ciągu zeszłego roku, podczas gdy ciągle pracowałem na pełny etat."
         },
-        "reason_5": {
-            "reason": "Elastyczność i kompleksowość.",
-            "text": " Oprócz moich obecnych umiejętności programowania moje życie zawodowe pozwoliło mi rozwinąć także inne umiejętności: zrozumienie biznesowej strony projektu (nie tylko technicznej), doświadczenie w Ecommerce a także w pracy z danymi oraz przyzwoite umiejętności w innych rejonach IT."
+        "reason_4": {
+            "reason": "Chęć ciągłego rozwoju.",
+            "text": " Moja historia zawodowa pokazuje, że zawsze staram się mierzyć wyżej."
         }
     },
     "contactHeader": "Chcesz się ze mną skontaktować?",

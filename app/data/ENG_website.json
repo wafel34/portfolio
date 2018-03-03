@@ -9,17 +9,17 @@
     "consoleText": "$: welcome!",
     "intro": {
         "welcome": "Hi, I'm Paweł!",
-        "text": " If you visited this website, it's quite possible that you are looking for a front-end developer. Let me help you with that. Scroll down if you're interested."
+        "text": " If you have visited this website, it's quite possible that you are looking for a front-end developer. Let me help you with that. Scroll down if you're interested."
     },
     "aboutHeader": "I can be your choice!",
-    "aboutText1": "When I build websites I always seek to deliver products on my higest possible level. I'm always positive about new challenges and try to improve my skills on every project. This is who I am.",
+    "aboutText1": "When I build websites I always seek to deliver products on my higest possible level. I'm always positive about new challenges and try to improve my skills on every project.",
     "aboutText2": "If you want to check my technological stack, please scroll down.",
-    "stackHeader": "My stack:",
+    "stackHeader": "Technologies that I work with:",
     "projectsHeader": "Projects",
     "projects": [
         {
             "name": "Recipes App",
-            "description": "Full stack application built in Angular.",
+            "description": "Full stack application built in Angular. View recipes, add to favourites and create your own.",
             "technologies": "Angular (2+, CLI), Sass, ExpressJS, MongoDB",
             "image": "images/recipes-app.jpg",
             "live": "https://recipes-angular-app.herokuapp.com/",
@@ -35,7 +35,7 @@
         },
         {
             "name": "Herbrand Street",
-            "description": "Built with vanilla JS. Used Google Maps API as well.",
+            "description": "Built with pure JS. Used Google Maps and Weather API as well.",
             "technologies": "Javascript, ExpressJS, External API, Accesibility, Sass, CSS Grid",
             "image": "images/herbrand.jpg",
             "live": "http://herbrandapartment.herokuapp.com/",
@@ -67,7 +67,7 @@
         },
         {
             "name": "TicTacToe",
-            "description": "Older project. Game where user play against computer.",
+            "description": "Play TicTacToe against computer.",
             "technologies": "Javascript",
             "image": "images/tictactoe.jpg",
             "live": "https://codepen.io/wafel34/full/NdzKVa/",
@@ -75,7 +75,7 @@
         },
         {
             "name": "Calculator",
-            "description": "Another older project, simple calculator.",
+            "description": "Older project, simple calculator.",
             "technologies": "Javascript",
             "image": "images/calc.jpg",
             "live": "https://codepen.io/wafel34/full/BQOaxB/",
@@ -85,24 +85,20 @@
     "whyMeHeader": "Why me?",
     "whyMe": {
         "reason_1": {
-            "reason": "Professional approach to work.",
-            "text": " Anywhere I have worked, I've been valued employee and can prove that with reference letters and contacts."
+            "reason": "Professional approach.",
+            "text": " I'm always serious about my duties in any job. I can  prove it with refference letters/contacts."
         },
         "reason_2": {
-            "reason": "Wiligness to keep improving myself.",
-            "text": " My carieer path shows that I always want to learn more and achieve higher goals."
+            "reason": "Very good English.",
+            "text": " For the last 2.5 years I have workd in London, which allowed me to practice the language on a daily basis."
         },
         "reason_3": {
-            "reason": "English on a very good level.",
-            "text": " For 2.5 years I have workd in London, and thanks to that I had ability to practice that language on a daily basis."
+            "reason": "I like to do it.",
+            "text": " Over 360 commits on GitHub in last year, while still working full time."
         },
         "reason_4": {
-            "reason": "Ability to deal with problems on my own.",
-            "text": " This is where English comes into play again. I'm not limited to information in one language, thus it's easier for me to find a solution to the problem.."
-        },
-        "reason_5": {
-            "reason": "Versality and complexity.",
-            "text": " Apart from programming skills my professional life helped me to develop other skills: understadning the business side (not just the technical one), ecommerce and operational experience, and decent skills in other areas of IT."
+            "reason": "Will to improve.",
+            "text": " My carieer path shows that I always aim higher."
         }
     },
     "contactHeader": "Want to concact me?",

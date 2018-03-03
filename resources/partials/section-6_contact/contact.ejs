@@ -3,7 +3,7 @@
         <div class="wrapper">
             <div class="col-2 col-2--to-hide">
                 <div class="svg-wrapper">
-                <svg class="svg_image" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg class="svg_image" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 1200 1200" style="enable-background:new 0 0 26.799 26.799;" xml:space="preserve" stroke-width="10" stroke="black" fill="none">
                     <g class="envelope">
                         <rect class="envelope__border" x="0" y="225" rx="10" ry="10" width="1200" height="600" />
@@ -35,18 +35,18 @@
                 <h2 class="contact__header"><%=data.contactHeader%></h2>
                 <span class="contact__text"><%=data.emailMe%><a href="mailto:work.pmarcinkowski@gmail.com">work.pmarcinkowski@gmail.com</a></span>
                 <span class="contact__text"><%=data.fillTheForm%></span>
-                <form action="" method="POST" class="form-wrapper" id="contactForm">
+                <form action="/contact" method="POST" class="form-wrapper" id="contactForm">
                     <div class="contact-form">
                         <div class="contact-form__item">
-                            <label class="contact-form__label" for="#contactName"><%=data.form.name%></label>
+                            <label class="contact-form__label" for="contactName"><%=data.form.name%></label>
                             <input type="text" name="contactName" id="contactName" class="contact-form__input" placeholder="<%=data.form.namePlaceholder%>" required>
                         </div>
                         <div class="contact-form__item">
-                            <label class="contact-form__label" for="#contactEmail"><%=data.form.email%></label>
+                            <label class="contact-form__label" for="contactEmail"><%=data.form.email%></label>
                             <input type="email" name="contactEmail" id="contactEmail" class="contact-form__input" placeholder="<%=data.form.emailPlaceholder%>" required>
                         </div>
                         <div class="contact-form__item">
-                            <label class="contact-form__label" for="#contactMessage"><%=data.form.message%></label>
+                            <label class="contact-form__label" for="contactMessage"><%=data.form.message%></label>
                             <textarea name="contactMessage" id="contactMessage" class="contact-form__textarea" placeholder="<%=data.form.messagePlaceholder%>" maxlength="300" required></textarea>
                         </div>
                         <div class="contact-form__item">
@@ -64,6 +64,5 @@
     <div class="snackbar-fail">
             <span class="snackbar-fail__message">Something went wrong...</span>
             <span class="snackbar-fail__message">Please try again or send email manually.</span>
-        </div>
     </div>
 </section>
