@@ -1,4 +1,11 @@
 var $ = window.jQuery = require('jQuery');
+var TweenMax = require('../../node_modules/gsap/src/uncompressed/TweenMax.js');
+var CSSPlugin = require('../../node_modules/gsap/src/uncompressed/plugins/CSSPlugin.js');
+var EasePack = require('../../node_modules/gsap/src/uncompressed/easing/EasePack.js');
+var ScrollToPlugin = require('../../node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin.js');
+var ScrollMagic = require('scrollmagic');
+
+
 var animations = {
     activeSection: 0,
     tlContact: new TimelineMax()
@@ -8,6 +15,7 @@ var animations = {
 animations.animateIntro = function() {
 
     var tl = new TimelineMax();
+    console.log(ScrollMagic);
     tl.from('.console', 1, {transform: 'scale(0)', ease: Elastic.easeOut.config(1, 0.5), delay: 0.5});
     tl.staggerTo('#mypath', 2.5, {
         attr: {

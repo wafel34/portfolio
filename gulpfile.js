@@ -24,7 +24,7 @@ const outputDir = './app/public';
 
 
 // env
-let env = 'development'; // change to production in order to run gulp in production mode
+let env = 'dev'; // change to production in order to run gulp in production mode
 
 // error handler
 
