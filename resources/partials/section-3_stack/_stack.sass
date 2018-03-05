@@ -29,7 +29,11 @@
     color: white
     &__icon
         width: 100%
-        fill: white
+        fill: #BBB
+
+.image-right
+    &__icon
+        fill: $orange-light
 
 // container for technologies icons (between front and back end icons)
 .technologies
@@ -37,7 +41,7 @@
     position: relative
     align-self: stretch
     margin: 0 20px
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,.5)
+    box-shadow: 2px 2px 5px 3px rgba(0,0,0,.5)
     border-radius: 2px
     min-height: inherit
     &__front,
@@ -50,12 +54,12 @@
         overflow: hidden
         border-radius: 2px
     &__front
-        background-color: #373737
+        background-color: #BBB
         z-index: 1
         width: 50%
         border-right: 5px solid $grey-dark
     &__back
-        background-color: $grey-primary
+        background-color: $orange-light
 
 // row of images inside the technologies container
 .images-row
