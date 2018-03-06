@@ -15,7 +15,6 @@ var animations = {
 animations.animateIntro = function() {
 
     var tl = new TimelineMax();
-    console.log(ScrollMagic);
     tl.from('.console', 1, {transform: 'scale(0)', ease: Elastic.easeOut.config(1, 0.5), delay: 0.5});
     tl.staggerTo('#mypath', 2.5, {
         attr: {
@@ -36,7 +35,9 @@ animations.createController = function() {
         reverse:false,
         offset: (window.innerHeight > 400) ? 200 : 0  // set offset depending on screen height
     })
-    .on('start', function(){animations.animateScreen();})
+    .on('start', function(){
+        animations.animateScreen();
+        animations.createNavbarShadow();})
     .addTo(controller); // assign the scene to the controller
 
     animations.triggerActiveSection('#intro', 0);
@@ -113,6 +114,11 @@ animations.animateScreen = function () {
 
     tl.set({}, {}, '+=2');
 
+};
+
+// this function adds border shadow to the navbar
+animations.createNavbarShadow = function() {
+    $('.navbar').addClass('navbar--shadow');
 };
 
 animations.animateProjects = function() {
