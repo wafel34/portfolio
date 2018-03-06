@@ -22,7 +22,7 @@
             "description": "Applikacja Full Stack zbudowana w Angularze.",
             "technologies": "Angular (2+, CLI), Sass, ExpressJS, MongoDB",
             "image": "images/recipes-app.jpg",
-            "live": "https://recipes-angular-app.herokuapp.com/",
+            "live": "https://recipes-angular.appspot.com/home",
             "code": "https://github.com/wafel34/recepies-angular-app"
         },
         {

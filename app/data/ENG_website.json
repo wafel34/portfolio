@@ -22,7 +22,7 @@
             "description": "Full stack application built in Angular. View recipes, add to favourites and create your own.",
             "technologies": "Angular (2+, CLI), Sass, ExpressJS, MongoDB",
             "image": "images/recipes-app.jpg",
-            "live": "https://recipes-angular-app.herokuapp.com/",
+            "live": "https://recipes-angular.appspot.com/",
             "code": "https://github.com/wafel34/recepies-angular-app"
         },
         {
