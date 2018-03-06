@@ -24,7 +24,7 @@ const outputDir = './app/public';
 
 
 // env
-let env = 'dev'; // change to production in order to run gulp in production mode
+let env = 'production'; // change to production in order to run gulp in production mode
 
 // error handler
 
@@ -83,7 +83,7 @@ gulp.task('js', function () {
             .pipe(concat('main.js'))
             .pipe(browserify())
             .pipe(gulpIf(env === 'production', uglify()))
-            .pipe(sourcemaps.write())
+            .pipe(gulpIf(env !== 'production', sourcemaps.write()))
             .pipe(gulp.dest(outputDir + '/js'))
             .pipe(browserSync.stream());
 });
@@ -97,7 +97,7 @@ gulp.task('sass', function () {
             .pipe(sourcemaps.init({loadMaps: true}))
             .pipe(sass())
             .pipe(autoprefixer())
-            .pipe(sourcemaps.write())
+            .pipe(gulpIf(env !== 'production', sourcemaps.write()))
             .pipe(gulpIf(env === 'production', cleanCSS({compatibility: 'ie8'})))
             .pipe(gulp.dest(outputDir + '/css'))
             .pipe(browserSync.stream());
