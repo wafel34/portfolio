@@ -17,7 +17,8 @@
     */
     if (window.innerWidth > 585) {
         $.each(imagesRow, function(item, value){
-            $(value).width(technologiesParent = $('.technologies')[0].clientWidth);
+            technologiesParent = $('.technologies')[0].clientWidth -20 ; //-20 is a margin on the parent
+            $(value).width(technologiesParent);
         });
 
     }
@@ -28,7 +29,7 @@
     */
     $(window).resize(function(){
         if (window.innerWidth >= 585) {
-            technologiesParent = $('.technologies')[0].clientWidth;
+            technologiesParent = $('.technologies')[0].clientWidth -20; // -20 is a margin on the parent
 
             $.each(imagesRow, function(item, value){
                 $(value).width(technologiesParent);
