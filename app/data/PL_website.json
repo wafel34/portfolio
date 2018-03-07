@@ -9,9 +9,9 @@
     "consoleText": "$: witaj!",
     "intro": {
         "welcome": "Cześć, jestem Paweł!",
-        "text": "Jeśli odwiedziłeś tą stronę, to całkiem możliwe, że szukasz  Junior Front-End Developera. Pozwól, że ci w tym pomogę. Przewniń w dół jeśli jesteś zainteresowany."
+        "text": "Jeśli odwiedziłeś tą stronę, to całkiem możliwe, że szukasz  Junior Front-End Developera. Pozwól, że ci w tym pomogę. Przewniń w dół, jeśli jesteś zainteresowany."
     },
-    "aboutHeader": "Mogę być twoim wyborem!",
+    "aboutHeader": "Możesz wybrać mnie!",
     "aboutText1": "Kiedy buduję strony, zawsze staram się tworzyć produkty na moim najwyższym poziomie. Jestem zawsze pozytywnie nastawiony do nowych wyzwań i staram się podnosić swoje umiejętności przy każdym projekcie.",
     "aboutText2": "Jeśli chcesz sprawdzić jakich technologii używam, przewiń w dół.",
     "stackHeader": "Technologie:",
@@ -30,7 +30,7 @@
             "description": "Strona oparta o ExpressJs, oraz EJS jako silnik szablonów.",
             "technologies": "ExpressJS, EJS, Sass, Gulp",
             "image": "images/skijumping.jpg",
-            "live": "https://skijumping.herokuapp.com/",
+            "live": "http://skijumping-app.appspot.com/",
             "code": "https://github.com/wafel34/skijumping"
         },
         {
@@ -38,7 +38,7 @@
             "description": "Strona zbudowana w ‘czystym’ JS. Użyłem także API od Google Maps.",
             "technologies": "Javascript, ExpressJS, External API, Accesibility, Sass, CSS Grid",
             "image": "images/herbrand.jpg",
-            "live": "http://herbrandapartment.herokuapp.com/",
+            "live": "https://herbrand-flat.appspot.com/",
             "code": "https://github.com/wafel34/herbrandStreet"
         },
         {
@@ -86,11 +86,11 @@
     "whyMe": {
         "reason_1": {
             "reason": "Profesjonalizm.",
-            "text": " Zawsze poważnie traktuję swoje obowiązki co mogę to potwierdzić referencjami."
+            "text": " Zawsze poważnie traktuję swoje obowiązki, co mogę to potwierdzić referencjami."
         },
         "reason_2": {
             "reason": "Bardzo dobry angielski",
-            "text": " Przez ponad 2.5 roku pracowałem w Londynie co pozwoliło mi paktykować ten język każdego dnia."
+            "text": " Przez ponad 2.5 roku pracowałem w Londynie, co pozwoliło mi praktykować ten język każdego dnia."
         },
         "reason_3": {
             "reason": "Lubię to robić.",
