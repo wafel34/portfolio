@@ -1,2 +1,5 @@
 runtime: nodejs
 env: flex
+env_variables:
+  EMAIL: 'work.pmarcinkowski@gmail.com'
+  PASS: '!skiwafel12'
