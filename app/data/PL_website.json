@@ -14,7 +14,7 @@
     "aboutHeader": "Możesz wybrać mnie!",
     "aboutText1": "Kiedy buduję strony, zawsze staram się tworzyć produkty na moim najwyższym poziomie. Jestem zawsze pozytywnie nastawiony do nowych wyzwań i staram się podnosić swoje umiejętności przy każdym projekcie.",
     "aboutText2": "Jeśli chcesz sprawdzić jakich technologii używam, przewiń w dół.",
-    "stackHeader": "Technologie:",
+    "stackHeader": "Technologie, w których używam:",
     "projectsHeader": "Projekty",
     "projects": [
         {
@@ -27,18 +27,18 @@
         },
         {
             "name": "Ski Jumping",
-            "description": "Strona oparta o ExpressJs, oraz EJS jako silnik szablonów.",
+            "description": "Strona oparta o ExpressJs, oraz EJS jako silnik szablonów. Ta aplikacja ładuje się dułużej, ponieważ jest hostowana na darmowym koncie Heroku.",
             "technologies": "ExpressJS, EJS, Sass, Gulp",
             "image": "images/skijumping.jpg",
-            "live": "http://skijumping-app.appspot.com/",
+            "live": "https://skijumping.herokuapp.com/",
             "code": "https://github.com/wafel34/skijumping"
         },
         {
             "name": "Herbrand Street",
-            "description": "Strona zbudowana w ‘czystym’ JS. Użyłem także API od Google Maps.",
-            "technologies": "Javascript, ExpressJS, External API, Accesibility, Sass, CSS Grid",
+            "description": "Strona zbudowana w ‘czystym’ JS. Użyłem także API od Google Maps. Ta aplikacja ładuje się dułużej, ponieważ jest hostowana na darmowym koncie Heroku.",
+            "technologies": "Javascript, ExpressJS, External API, Accesibility, Sass, CSS Grid.",
             "image": "images/herbrand.jpg",
-            "live": "https://herbrand-flat.appspot.com/",
+            "live": "http://herbrandapartment.herokuapp.com/",
             "code": "https://github.com/wafel34/herbrandStreet"
         },
         {

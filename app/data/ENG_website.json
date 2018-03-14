@@ -27,18 +27,18 @@
         },
         {
             "name": "Ski Jumping",
-            "description": "Website built with ExpressJS and EJS as a view engine.",
+            "description": "Website built with ExpressJS and EJS as a view engine. This app will load slower as it's hosted on free Heroku hosting.",
             "technologies": "ExpressJS, EJS, Sass, Gulp",
             "image": "images/skijumping.jpg",
-            "live": "http://skijumping-app.appspot.com/",
+            "live": "https://skijumping.herokuapp.com/",
             "code": "https://github.com/wafel34/skijumping"
         },
         {
             "name": "Herbrand Street",
-            "description": "Built with pure JS. Used Google Maps and Weather API as well.",
+            "description": "Built with pure JS. Used Google Maps and Weather API as well. This app will load slower as it's hosted on free Heroku hosting.",
             "technologies": "Javascript, ExpressJS, External API, Accesibility, Sass, CSS Grid",
             "image": "images/herbrand.jpg",
-            "live": "https://herbrand-flat.appspot.com/",
+            "live": "http://herbrandapartment.herokuapp.com/",
             "code": "https://github.com/wafel34/herbrandStreet"
         },
         {
