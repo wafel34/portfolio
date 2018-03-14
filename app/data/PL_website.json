@@ -30,7 +30,7 @@
             "description": "Strona oparta o ExpressJs, oraz EJS jako silnik szablonów. Ta aplikacja ładuje się dułużej, ponieważ jest hostowana na darmowym koncie Heroku.",
             "technologies": "ExpressJS, EJS, Sass, Gulp",
             "image": "images/skijumping.jpg",
-            "live": "https://skijumping.herokuapp.com/",
+            "live": "http://skijumping-app.appspot.com/",
             "code": "https://github.com/wafel34/skijumping"
         },
         {
@@ -38,7 +38,7 @@
             "description": "Strona zbudowana w ‘czystym’ JS. Użyłem także API od Google Maps. Ta aplikacja ładuje się dułużej, ponieważ jest hostowana na darmowym koncie Heroku.",
             "technologies": "Javascript, ExpressJS, External API, Accesibility, Sass, CSS Grid.",
             "image": "images/herbrand.jpg",
-            "live": "http://herbrandapartment.herokuapp.com/",
+            "live": "https://herbrand-flat.appspot.com/",
             "code": "https://github.com/wafel34/herbrandStreet"
         },
         {
